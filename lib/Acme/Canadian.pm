@@ -3,7 +3,7 @@ package Acme::Canadian;
 use warnings;
 use strict;
 
-use Filter::Util::Call;
+use Filter::Simple;
 
 =head1 NAME
 
@@ -11,11 +11,11 @@ Acme::Canadian - Canooks in your code, eh?
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -28,27 +28,10 @@ What is this module aboot? I'll tell you, eh?  It decanadianizes your code.
 All in good fun.  Feel free to write Acme::USA where your code attempts futily
 to control all other CPAN modules.
 
-=head1 FUNCTIONS
-
-=head2 import
-
 =cut
 
-sub import {
-  my ($type) = @_;
-  my ($ref)  = [];
-  filter_add(bless $ref);
-}
-
-=head2 filter
-
-=cut
-
-sub filter {
-  my ($self) = @_;
-  my ($status) ; 
-  if (($status = filter_read()) > 0) { s/, eh?/;/g; s/aboot/about/; }
-  $status;
+FILTER {
+  s/, eh\?/;/g; s/aboot/about/;
 }
 
 =head1 AUTHOR

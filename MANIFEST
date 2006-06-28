@@ -5,6 +5,7 @@ Makefile.PL
 README
 lib/Acme/Canadian.pm
 t/00-load.t
+t/01-hockey.t
 t/boilerplate.t
 t/pod-coverage.t
 t/pod.t

@@ -11,15 +11,17 @@ Acme::Canadian - Canooks in your code, eh?
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
     use Acme::Canadian;
+
+    print "What's this all aboot?", eh?
 
 =head1 DESCRIPTION
 
